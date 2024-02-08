@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Comprehension_Task.Profile"
+             Title="Profile"
+             BackgroundColor="Black">
+
+    <Grid Margin="25,25,0,0" RowDefinitions=".1*, .2*, .15*,.45*,.1*">
+        <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
+            
+            <Border 
+                    HeightRequest="75"
+                    HorizontalOptions="Start"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    WidthRequest="75">
+                <Image Aspect="AspectFill"
+                       HeightRequest="100"
+                       HorizontalOptions="Center"
+                       Source="user.jpg" />
+
+                
+            </Border>
+        </Grid>
+
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center">
+            <Label
+                FontSize="30"
+                Text="Jimmy Lopez"
+                TextColor="White"/>
+            <Label
+                Margin="0,10,0,0"
+                FontSize="20"
+                Text="🌟 Dreamer | 🎨 Creative Soul | 📚 Bookworm | ✨ Optimist |"
+                TextColor="#ACB1BB"/>
+
+            <Label Margin="0,20,0,0"
+                FontSize="13"                
+                TextColor="#ACB1BB">
+                I like exploring different mediums, from acrylic painting to digital illustration and getting lost in the pages of fantasy novels and thought-provoking poetry.
+            </Label>
+
+            <Button
+                Margin="0,20,0,0"
+                x:Name="EditBtn"
+                Text="Edit Profile"
+                SemanticProperties.Hint="Sends you to the edit page"
+                Clicked="OnEditClicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        
+    </Grid>
+</ContentPage>
